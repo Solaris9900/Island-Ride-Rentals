@@ -1,0 +1,298 @@
+/* ============================================================
+   ISLAND RIDE RENTALS - DESIGN SYSTEM
+   Version: 1.0 (Foundation)
+
+   ============================================================
+
+   COLOR PALETTE
+
+   Header Background   : #efe0c2
+   Navbar Background   : #6b563c
+   Hero Background     : ?
+   Body Background     : ?
+   Footer Background   : ?
+
+   Primary Text        : ?
+   Secondary Text      : ?
+   Heading Color       : ?
+   Link Color          : #ffffff
+   Link Hover          : #d9c08f
+
+   Primary Button      : ?
+   Button Hover        : ?
+   Button Text         : ?
+
+   Card Background     : ?
+   Card Border         : ?
+   Card Shadow         : ?
+
+   Divider             : rgba(255,255,255,0.2)
+
+   ============================================================
+
+   TYPOGRAPHY
+
+   Font Family         : ?
+   Base Font Size      : 25px (Navbar)
+   Heading Scale       : ?
+   Line Height         : ?
+
+   ============================================================
+
+   SPACING SYSTEM
+
+   Navbar Gap          : 80px (Desktop)
+   Navbar Padding      : 4px 0
+   Nav Link Padding    : 10px 15px
+
+   Header Padding      : 4px 0
+   Header Logo Height  : 250px (Desktop)
+
+   Border Radius       : ?
+   Shadow              : ?
+
+   ============================================================
+
+   COMPONENTS
+
+   ✓ Header
+   ✓ Navbar
+   ☐ Hero
+   ☐ Tour Cards
+   ☐ Rental Cards
+   ☐ Contact
+   ☐ Footer
+
+   ============================================================
+
+   RESPONSIVE CHECKLIST
+
+   ✓ Viewport Meta Tag
+
+   ☐ Fix horizontal overflow
+   ☐ Reduce header size on mobile
+   ☐ Mobile navbar layout
+   ☐ Mobile divider behavior
+   ☐ Sticky navbar mobile test
+
+   ============================================================ */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+html{
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+	overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header / Logo */
+header {
+	background-color: #efe0c2;
+	padding: 4px 0;
+	border-bottom: 1px solid #d7c39b;
+}
+
+.logo {
+    display: block;
+    width: auto;             /* Adjust as needed */
+    height: 250px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+nav {
+	background-color: #6b563c;
+	padding: 4px 0;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+nav a {
+	color: #ffffff;
+	text-decoration: none;
+	padding: 10px 15px;
+	font-size: 25px;
+	display: block;
+	transition: 
+		color 0.25s ease,
+		background-color .25s ease,
+		transform .25s ease;
+}
+
+nav a:hover {
+	color: #d9c08f ;
+}
+
+nav ul {
+	display: flex;
+	justify-content: center;
+	gap: 0;
+	list-style: none;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	margin: 0;
+	border-left: 1px solid rgba(255,255,255,0.2);
+	padding: 0 80px;
+}
+
+nav li:last-child {
+	border-right:1px solid rgba(255,255,255,0.2);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #f59e0b;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #d97706;
+    transform: scale(1.05);
+}
+
+/* Sections */
+section {
+    padding: 70px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+/* About Section */
+#about {
+    background: #f8fafc;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	
+	.logo {
+		height: 120px;
+	}
+	
+	nav li {
+		padding: 0;
+		border: none;
+		flex: 1;
+		text-align: center;
+	}
+
+    nav ul {
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 0;
+    }
+
+    nav a {
+		display: block;
+        font-size: 0.9rem;
+        padding: 12px 4px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
