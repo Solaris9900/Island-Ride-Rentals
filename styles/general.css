@@ -91,11 +91,9 @@ img {
 
 html{
 	scroll-behavior: smooth;
-	overflow-x: hidden;
 }
 
 body {
-	overflow-x: hidden;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
